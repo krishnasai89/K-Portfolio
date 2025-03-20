@@ -74,30 +74,61 @@ for (let i = 0; i < selectItems.length; i++) {
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-  }
-};
+// Select all filter buttons and project items
+const filterButtons = document.querySelectorAll("[data-filter-btn]");
+const projectItems = document.querySelectorAll("[data-filter-item]");
+
+// Add click event listener to each filter button
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove the 'active' class from all buttons
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+    // Add 'active' class to the clicked button
+    button.classList.add("active");
+
+    const filterCategory = button.textContent.trim();
+
+    // Show or hide project items based on the selected category
+    projectItems.forEach((item) => {
+      const itemCategory = item.getAttribute("data-category");
+
+      if (filterCategory === "All" || filterCategory === itemCategory) {
+        item.classList.add("active"); // Show the item
+      } else {
+        item.classList.remove("active"); // Hide the item
+      }
+    });
+  });
+});
 
 // add event in all filter button items for large screen
+// Get references to buttons, project items, and the category display element
 let lastClickedBtn = filterBtn[0];
 
+// Function to filter project items based on the selected category
+function filterFunc(selectedValue) {
+  projectItems.forEach((item) => {
+    const itemCategory = item.getAttribute("data-category").toLowerCase();
+
+    if (selectedValue === "all" || selectedValue === itemCategory) {
+      item.classList.add("active"); // Show the item
+    } else {
+      item.classList.remove("active"); // Hide the item
+    }
+  });
+}
+
+// Add event listener to each filter button
 for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
+    selectValue.innerText = this.innerText; // Update the selected value display
     filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
+    lastClickedBtn.classList.remove("active"); // Remove 'active' from the last button
+    this.classList.add("active"); // Add 'active' to the clicked button
+    lastClickedBtn = this; // Update the lastClickedBtn to the current button
   });
 }
 
