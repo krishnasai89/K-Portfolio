@@ -331,7 +331,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 122px;
+  max-height: 132px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -1269,6 +1269,58 @@ textarea.form-input::-webkit-resizer {
 
 .form-input:focus:invalid {
   border-color: var(--bittersweet-shimmer);
+}
+.btns {
+  position: relative;
+  width: 100%;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 20px;
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+  margin-top: 20px;
+}
+.btns::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.btns ion-icon {
+  font-size: 16px;
+}
+
+.btns:hover {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.btns:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
+
+.btns:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btns:disabled:hover {
+  background: var(--border-gradient-onyx);
+}
+
+.btns:disabled:hover::before {
+  background: var(--bg-gradient-jet);
 }
 
 .form-btn {
