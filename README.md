@@ -43,7 +43,7 @@ Highlights skills, projects, and GitHub links.
 
 ## 📫 Connect With Me  
 
-💼 [LinkedIn](https://www.linkedin.com/in/krishnasaivellampalli/)
+💼 [LinkedIn](https://www.linkedin.com/in/krishna-sai-vellampalli/)
 
 💻 [GitHub](https://github.com/krishnasai89)  
 
