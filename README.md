@@ -1,25 +1,50 @@
-# Krishna - Personal portfolio
+# 🚀 Krishna Sai – Portfolio
 
-Krishna is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+Welcome to my developer portfolio 👨‍💻.
+This repository showcases the projects I’ve built while learning and applying Full Stack Development skills using Python (Django + Django REST Framework), React, and REST APIs.
 
-## Prerequisites
+## 👤 About Me
 
-Before you begin, ensure you have met the following requirements:
+🎓 Fresher passionate about Web Development & Backend Engineering
 
-- [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+💡 Skilled in Python, Django, DRF, React, JavaScript, HTML/CSS
 
-## Installing
+🔒 Interested in APIs, Authentication (JWT), Cybersecurity basics, and Networking
 
-To install **K-Profolio**, follow these steps:
+🌱 Currently exploring Full Stack Projects & Open Source Contributions
 
-Linux and macOS:
+📍 Based in India
 
-```bash
-sudo git clone https://github.com/krishnasai89/K-Portfolio.git
-```
+## 🛠️ Tech Stack
 
-Windows:
+Backend: Python, Django, Django REST Framework, JWT Auth
 
-```bash
-git clone https://github.com/krishnasai89/K-Portfolio.git
-```
+Frontend: React, JavaScript, HTML, CSS, Tailwind
+
+Database: SQLite, PostgreSQL (learning)
+
+Tools: Git, GitHub, VS Code, Postman
+
+## 📌 Featured Projects
+
+### Full Stack Blog App
+
+Built with Django REST Framework + JWT Auth (backend) and React (frontend).
+
+Features: User authentication, create/read/update/delete posts, responsive UI.
+
+### Portfolio Website
+
+Personal portfolio built using React.
+
+Highlights skills, projects, and GitHub links.
+
+(Add more as you build them)
+
+## 📫 Connect With Me  
+
+💼 [LinkedIn](https://www.linkedin.com/in/krishnasaivellampalli/)
+
+💻 [GitHub](https://github.com/krishnasai89)  
+
+📧 [Email Me](mailto:krishnasaivellampalli@gmail.com)  
